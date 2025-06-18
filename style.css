@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Times New Roman", Georgia, Serif;
+}
+
+:root {
+  --second: "#757575";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+  text-align: center;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+a {
+  letter-spacing: 4px;
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Elements belonging to the menu bar. */
+#menu_bar {
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.12) 0px 2px 10px 0px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.menu_bar_side {
+  margin: 1.5em;
+  width: 15em;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Elements belonging to the banner. */
+#banner {
+  text-align: center;
+  position: relative;
+}
+
+#banner_text {
+  opacity: 0.5;
+  z-index: 1;
+  margin: 1em;
+  position: absolute;
+  bottom: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 10px;
+}
+
+#about-catering,
+#our-menu {
+  display: flex;
+  padding: 12px 24px;
+  gap: 5%;
+  padding: 5%;
+}
+
+#about-catering p,
+#our-menu p {
+  line-height: 1.5;
+}
+
+.half {
+  width: 50%;
+}
+
+.section-text {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5%;
+}
+
+.light-grey-bg {
+  background-color: #f1f1f1;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.light-grey-fg {
+  color: #757575;
+}
+
+.menu-item h4 {
+  text-align: left;
+}
+
+/* #contact-us {
+    letter-spacing: 1.5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5%;
+} */
+
+#contact-us h1 {
+  padding: 50px 0;
+  text-align: left;
+}
+
+#contact-us p {
+  padding: 10px 0;
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 11px;
+  border-radius: 4px;
+  font-family: "Times New Roman", Georgia, Serif;
+}
+
+button {
+  width: fit-content;
+  background-color: #f1f1f1;
+  border: none;
+  margin-top: 20px;
+  padding: 10px;
+  font-family: "Times New Roman", Georgia, Serif;
+}
+
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  margin-top: 50px;
+  padding: 50px;
+}
+
+#menu_bar_dropdown_icon:hover {
+  #dropdown_items {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  #menu_bar_left_side {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  #menu_bar_dropdown_icon {
+    display: none;
+  }
+  #menu_bar_side {
+    display: block;
+  }
+}
+
+#dropdown_items {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  #menu_bar_dropdown_icon {
+    margin: 1.5em;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  #menu_bar_right_side {
+    display: none;
+  }
+  .half {
+    width: 100%;
+  }
+  #about-catering,
+  #our-menu {
+    display: block;
+  }
+  #dropdown_items a {
+    display: block;
+  }
+}
